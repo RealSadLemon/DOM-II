@@ -28,5 +28,8 @@ import './less/index.less'
     window.addEventListener('resize', e =>{
         alert('YOU CHANGED THE SIZE!?!?!');
     });
+    footer.addEventListener('wheel', e =>{
+        alert("YOU CANNOT SCROLL FURTHER");
+    });
 })()
 // Your code goes here!
