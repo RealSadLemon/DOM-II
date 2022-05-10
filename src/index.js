@@ -3,6 +3,7 @@ import './less/index.less'
     const html = document.querySelector('html');
     const footer = document.querySelector('.footer');
     const imagesArr = document.querySelectorAll('img');
+    const logo = document.querySelector('.logo-heading');
     html.addEventListener('keydown', e =>{
         if(e.key === 'r'){
             html.style.backgroundColor = 'red';
@@ -21,6 +22,11 @@ import './less/index.less'
             window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley');
         });
     });
-    
+    logo.addEventListener('click', e =>{
+        logo.style.backgroundColor = 'blue';
+    })
+    window.addEventListener('resize', e =>{
+        alert('YOU CHANGED THE SIZE!?!?!');
+    });
 })()
 // Your code goes here!
