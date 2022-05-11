@@ -22,14 +22,30 @@ import './less/index.less'
             window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley');
         });
     });
-    logo.addEventListener('click', e =>{
-        logo.style.backgroundColor = 'blue';
+    window.addEventListener('load', e =>{
+        logo.textContent = 'This was edited with an event';
     })
     window.addEventListener('resize', e =>{
         alert('YOU CHANGED THE SIZE!?!?!');
     });
     footer.addEventListener('wheel', e =>{
         alert("YOU CANNOT SCROLL FURTHER");
+    });
+    document.querySelector('div > header > h2').addEventListener('dblclick', e =>{
+        logo.textContent = 'WOW';
+    });
+    let needyNum = 0;
+    window.addEventListener('blur', e =>{
+        if(needyNum === 0){
+            needyNum++;
+            alert('Why would you leave me...');
+        }
+    });
+    window.addEventListener('focus', e =>{
+        if(needyNum < 2){
+            needyNum++;
+            alert('Youre back!');
+        }
     });
 })()
 // Your code goes here!
